@@ -24,7 +24,7 @@ rmvbin <- function (n, margprob,
   else if (any(eigen(sigma)$values<0))
     stop ("Sigma is not positive definite.")
   
-  retval <- rmvnorm(n, qnorm(margprob), as.matrix(sigma))
+  retval <- rmvnorm(n, qnorm(margprob, sd = sqrt(diag(sigma))), as.matrix(sigma))
   retval <- ra2ba(retval)
   dimnames(retval) <- list(NULL, colnames)
   retval
