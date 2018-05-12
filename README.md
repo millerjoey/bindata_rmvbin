@@ -20,3 +20,6 @@ It should be:
 ```r
 retval <- rmvnorm(n, qnorm(margprob, sd = sqrt(diag(sigma))), as.matrix(sigma))
 ```
+
+See change to fixed source code for the function:
+https://github.com/millerjoey/bindata_rmvbin/commit/a2713a8820c4d07b2ed989217edc04afea12c315#diff-ebfabe765ddba3de73b7e0cfa966675a
